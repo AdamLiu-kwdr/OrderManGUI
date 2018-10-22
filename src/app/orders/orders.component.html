@@ -1,0 +1,17 @@
+<table>
+    <tr>
+        <th>Order ID</th>
+        <th>Order Name</th>
+        <th>Order Time</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+    </tr>
+    <tr *ngFor="let _order of orders">
+        <td>{{_order.id}}</td>
+        <td>{{_order.orderName}}</td>
+        <td>{{_order.orderTime | date}}</td>
+        <td>{{_order.product.productName}}</td>
+        <td>{{_order.quantity}}</td>
+    </tr>
+</table>
+

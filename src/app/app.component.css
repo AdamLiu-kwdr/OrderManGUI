@@ -1,0 +1,14 @@
+.page-container {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.content{
+    width: 100%;
+    background: #e4ecf1;
+}
+
+a.disabled {
+    pointer-events: none;
+}

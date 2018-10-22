@@ -1,0 +1,4 @@
+These model class are synced with OrderMan's model class.
+Please refer to Orderman for documention.
+
+Checked 2018/10/15
