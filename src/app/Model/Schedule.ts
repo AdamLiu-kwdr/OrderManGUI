@@ -1,8 +1,9 @@
 import { Order } from "./Order";
 
+//Use this as standart
 export class Schedule {
     id:number;
-    Working:boolean;
-    ProducedCount:number;
-    Orders:Order;
+    working?:boolean;
+    producedCount:number;
+    orders:Order;
 }

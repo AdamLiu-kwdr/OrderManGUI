@@ -7,8 +7,10 @@ import { AppComponent } from './app.component';
 import { OrdersComponent } from './orders/orders.component';
 import { UiNavComponent } from './ui-nav/ui-nav.component';
 import { UiDashboardComponent } from './ui-dashboard/ui-dashboard.component';
-import { LogComponent } from './log/log.component';
 import { ProductComponent } from './product/product.component';
+import { LoglistComponent } from './loglist/loglist.component';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,15 @@ import { ProductComponent } from './product/product.component';
     OrdersComponent,
     UiNavComponent,
     UiDashboardComponent,
-    LogComponent,
-    ProductComponent
+    ProductComponent,
+    LoglistComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    CarouselModule
+    CarouselModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

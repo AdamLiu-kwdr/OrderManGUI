@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Order } from "../Model/Order";
 import { OrderService } from "../Order.service";
@@ -24,5 +24,4 @@ export class OrdersComponent implements OnInit {
     this.orderService.getOrders()
       .subscribe(_orders => this.orders = _orders); //always use DIFFERENT names!
   }
-
 }

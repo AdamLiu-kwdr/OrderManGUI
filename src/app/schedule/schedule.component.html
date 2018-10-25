@@ -1,0 +1,27 @@
+
+<!-- Wait until Schedules has values -->
+<div *ngIf="Schedules">
+  <!-- No content -->
+  <div *ngIf="Schedules.length == 0">
+    <p>No job for now</p>
+  </div>
+  
+  <!-- Has content -->
+  <div *ngIf="!(Schedules.length == 0)">
+      <table class="table">
+          <tr>
+              <th>Schedule ID</th>
+              <th>Working</th>
+              <th>ProducedCount</th>
+              <th>Order Id</th>
+          </tr>
+          <tr *ngFor="let _Schedule of Schedules">
+              <td>{{_Schedule.id }}</td>
+              <td>{{_Schedule.working }}</td>
+              <td>{{_Schedule.producedCount }}</td>
+              <td>{{_Schedule.orders.id}}</td>
+          </tr>
+          </table>
+  </div>
+</div>
+

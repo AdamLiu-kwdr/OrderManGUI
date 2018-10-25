@@ -1,4 +1,5 @@
-<table>
+<div *ngIf="orders">
+<table class="table">
     <tr>
         <th>Order ID</th>
         <th>Order Name</th>
@@ -14,4 +15,4 @@
         <td>{{_order.quantity}}</td>
     </tr>
 </table>
-
+</div>

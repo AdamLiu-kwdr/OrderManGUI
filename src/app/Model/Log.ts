@@ -1,7 +1,7 @@
 export class Log {
-    ID:number;
+    id:number;
     type:string;
-    Author:string;
-    Message:string;
-    Time:Date;
+    author:string;
+    message:string;
+    time:Date;
 }

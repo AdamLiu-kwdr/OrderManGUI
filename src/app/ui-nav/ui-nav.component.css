@@ -2,6 +2,7 @@
     min-width: 250px;
     max-width: 250px;
     min-height: 100vh;
+    height: 100%;
 }
 
 p {
@@ -19,7 +20,6 @@ p {
 }
 
 #sidebar {
-    /* don't forget to add all the previously mentioned styles here too */
     background: #343a40;
     color: #fff;
     transition: all 0.3s;

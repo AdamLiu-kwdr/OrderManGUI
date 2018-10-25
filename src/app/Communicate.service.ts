@@ -22,9 +22,9 @@ export class CommunicateService {
 
     private APIRoute:string=environment.OrderManApiURL; //URL to orders, in enviorment file.
 
-    //Return All Orders
-    getOrders(recordCount:number): Observable<Log[]>{
-        return this.http.get<Log[]>(`${this.APIRoute}/Log/${recordCount}`);
+    //Return Logs
+    getLogs(recordCount:number): Observable<Log[]>{
+        return this.http.get<Log[]>(`${this.APIRoute}/Log`);
     }
 
     //Call CheckConnection and read HTTP respond code (Under construction.)
