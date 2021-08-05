@@ -1,18 +1,28 @@
 <div *ngIf="orders">
 <table class="table">
     <tr>
-        <th>Order ID</th>
-        <th>Order Name</th>
-        <th>Order Time</th>
-        <th>Product Name</th>
-        <th>Quantity</th>
+        <th>訂單編號</th>
+        <th>訂購人</th>
+        <th>訂單產生時間</th>
+        <th>訂購商品</th>
+        <th>數量</th>
+        <th>狀態</th>
+        <th><!-- Functions --></th>
     </tr>
-    <tr *ngFor="let _order of orders">
+
+    <tr *ngFor="let _order of orders " class="table-bordered" [ngClass]="{'table-success': _order.finished === true,'table-danger': !_order.finished === true}">
         <td>{{_order.id}}</td>
         <td>{{_order.orderName}}</td>
         <td>{{_order.orderTime | date}}</td>
         <td>{{_order.product.productName}}</td>
         <td>{{_order.quantity}}</td>
+        <td>{{_order.finished ? '已完成':'未完成'}}</td>
+        <td>
+            <div class="btn-group" role="group" aria-label="Basic example">
+           <!-- <button type="button" class="btn btn-secondary">修改</button> -->
+            <button type="button" class="btn btn-dark" (click)="confirmDelete(_order)">刪除</button>
+            </div>
+        </td>
     </tr>
 </table>
 </div>

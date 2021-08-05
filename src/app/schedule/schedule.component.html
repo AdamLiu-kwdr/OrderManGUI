@@ -10,15 +10,19 @@
   <div *ngIf="!(Schedules.length == 0)">
       <table class="table">
           <tr>
-              <th>Schedule ID</th>
-              <th>Working</th>
-              <th>ProducedCount</th>
-              <th>Order Id</th>
+              <th>序號</th>
+              <th>狀態</th>
+              <th>已生產數量</th>
+              <th>訂購數量</th>
+              <th>期限</th>
+              <th>訂單編號</th>
           </tr>
-          <tr *ngFor="let _Schedule of Schedules">
+          <tr *ngFor="let _Schedule of Schedules" [ngClass]="{'table-warning': _Schedule.working === true,'table-info': _Schedule.working === false}">
               <td>{{_Schedule.id }}</td>
-              <td>{{_Schedule.working }}</td>
+              <td>{{_Schedule.working ? '正在運轉':'等待生產' }}</td>
               <td>{{_Schedule.producedCount }}</td>
+              <td>{{_Schedule.orders.quantity}}</td>
+              <td>{{_Schedule.orders.finishTime | date:'mediumDate'}}</td>
               <td>{{_Schedule.orders.id}}</td>
           </tr>
           </table>

@@ -10,6 +10,7 @@ import { Schedule } from "./Model/Schedule";
 })
 
 export class scheduleService {
+
     constructor(
         private http:HttpClient
     ){}
@@ -20,5 +21,10 @@ export class scheduleService {
     getSchedules(): Observable<Schedule[]>{
         var Schedules = this.http.get<Schedule[]>(this.APIRoute+`/Schedule`);
         return Schedules;
+    }
+
+    generateSchedule() :Observable<Schedule[]>{
+        var NewSchedules = this.http.get<Schedule[]>(`${this.APIRoute}/Schedule/Generate`);
+        return NewSchedules;
     }
 }

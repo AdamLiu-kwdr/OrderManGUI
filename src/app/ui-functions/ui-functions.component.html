@@ -1,0 +1,14 @@
+<br />
+<h4>近期訊息</h4>
+<hr />
+<app-loglist [Count]=20></app-loglist>
+<hr />
+<h4>時程表</h4>
+<button type="button" class="btn btn-secondary" (click)="generateNewSchedule()">產生新時程表</button>
+<hr />
+<h4>生產線</h4>
+<div class="btn-group" role="group">
+<button type="button" class="btn btn-secondary" (click)="initProductionLine()">初始化生產線</button>
+<button type="button" class="btn btn-dark" (click)="ActivateProductionLine()">啟動生產線(半自動)</button>
+</div>
+<div *ngIf="CheckResponse"><span>狀態:{{CheckResponse}}</span></div>

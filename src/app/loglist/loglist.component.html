@@ -1,1 +1,1 @@
-<p *ngFor="let log of logs">{{log.time}}[{{log.author}}]:{{log.message}}</p>
+<p *ngFor="let log of logs">{{log.time | date:'medium'}}[{{log.author}}]:{{log.message}}</p>

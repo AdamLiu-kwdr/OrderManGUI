@@ -12,3 +12,12 @@
 a.disabled {
     pointer-events: none;
 }
+
+footer {
+    padding: 2px;
+    height: 5%;
+    color: white;
+    background: #343a40;
+    display:flex;
+    justify-content: center;
+}

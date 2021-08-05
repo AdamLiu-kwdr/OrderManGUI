@@ -1,0 +1,26 @@
+<!-- Header -->
+<div class="modal-header">
+    <h4 class="modal-title pull-left">確認刪除訂單</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <!-- Body -->
+  <div class="modal-body">
+    <div *ngIf="order">
+      <ul>
+       <li>訂單編號:{{order.id}}</li>
+       <li>訂購人:{{order.orderName}}</li>
+       <li>訂購時間{{order.orderTime}}</li>
+       <li>訂購商品:{{order.product.productName}}</li>
+       <li>訂購數量:{{order.quantity}}</li>
+    </ul>  
+  </div>
+  </div>
+  
+  <!-- footer -->
+  <div class="modal-footer">
+    <button type="button" class="btn btn-dark" (click)="this.deleteOrders(order)">刪除</button>
+    <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">取消</button>
+  </div>

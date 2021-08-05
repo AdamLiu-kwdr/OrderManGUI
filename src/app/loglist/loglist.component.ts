@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Log } from "../Model/Log";
 import { CommunicateService } from "../Communicate.service";
@@ -12,6 +12,8 @@ export class LoglistComponent implements OnInit {
 
   logs: Log[];
 
+  @Input() Count:number = 10;
+
   constructor(private communicationService:CommunicateService) { }
 
   ngOnInit() {
@@ -19,8 +21,8 @@ export class LoglistComponent implements OnInit {
   }
 
   getLog(): void {
-    this.communicationService.getLogs(10)
-      .subscribe(_Logs => this.logs = _Logs.slice(0,5));
+    this.communicationService.getLogs(this.Count)
+      .subscribe(_Logs => this.logs = _Logs.slice(0,this.Count));
   }
 
 }
